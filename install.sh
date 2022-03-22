@@ -16,12 +16,12 @@ sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-
 chmod +x /usr/bin/docker-compose
 
 # Downloads configs...
-mkdir /home/aptos-full-node
+mkdir /home/aptos
 
-wget -O /home/aptos-full-node/docker-compose.yaml https://raw.githubusercontent.com/aptos-labs/aptos-core/main/docker/compose/public_full_node/docker-compose.yaml
-wget -O /home/aptos-full-node/public_full_node.yaml https://raw.githubusercontent.com/aptos-labs/aptos-core/main/docker/compose/public_full_node/public_full_node.yaml
-wget -O /home/aptos-full-node/genesis.blob https://devnet.aptoslabs.com/genesis.blob
-wget -O /home/aptos-full-node/waypoint.txt https://devnet.aptoslabs.com/waypoint.txt
+wget -O /home/aptos/docker-compose.yaml https://raw.githubusercontent.com/aptos-labs/aptos-core/main/docker/compose/public_full_node/docker-compose.yaml
+wget -O /home/aptos/public_full_node.yaml https://raw.githubusercontent.com/aptos-labs/aptos-core/main/docker/compose/public_full_node/public_full_node.yaml
+wget -O /home/aptos/genesis.blob https://devnet.aptoslabs.com/genesis.blob
+wget -O /home/aptos/waypoint.txt https://devnet.aptoslabs.com/waypoint.txt
 
 # Running docker-compose
-docker-compose -f /home/aptos-full-node/docker-compose.yaml up -d
+docker-compose -f /home/aptos/docker-compose.yaml up -d
